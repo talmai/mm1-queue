@@ -28,28 +28,28 @@ Airport Queues Simulation
 *** To create a queue: *** 
               
     MM1_Queue checkin;
->> this creates a new instance of the object
+> this creates a new instance of the object
     checkin.set_file_names("01_log.txt", "01_wait.txt", "01_service.txt");
->> set_file_names is used to set the name of the files for posterior analysis (log)
+> set_file_names is used to set the name of the files for posterior analysis (log)
     checkin.set_lambda(33);
     checkin.set_mu(53);
->> sets lambda and mu which is used by the 2 internal random number generator objects
+> sets lambda and mu which is used by the 2 internal random number generator objects
     checkin.initialize();
->> necessary to calculate theoretical results (E[n], E[r], ...), and generate arrivals
+> necessary to calculate theoretical results (E[n], E[r], ...), and generate arrivals
     checkin.set_seed(1, 7.51391e+008);
->> sets seeds for both internal random number generators
+> sets seeds for both internal random number generators
 
 *** Stopping Criteria: *** 
          
     for (; !checkin.is_within_error_range(0.001);)
->> this means that program will keep running until difference between expected E[r] and actual E[r] is less than given range
+> this means that program will keep running until difference between expected E[r] and actual E[r] is less than given range
 
 *** Handle events within queue: *** 
        
     Customer cust = checkin.process_next_event();
->> this will process departure or arrival within queue. IF there is departure, then customer will be returned.
+> this will process departure or arrival within queue. IF there is departure, then customer will be returned.
 
 *** See output: *** 
     
     checkin.output();
->> this will print to screen the results from queue    
+> this will print to screen the results from queue    
