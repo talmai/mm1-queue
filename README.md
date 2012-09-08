@@ -2,19 +2,19 @@ Airport Queues Simulation
 
 *** Quick description ***
 
-The purpose of this project is to simulate the queues that an airline customer will have to face in order to be 
-able to board a plane. We assume that there is only one air line company in the airport. Furthermore, we
-assume that passengers' interarrival times are independent and identically distributed (IID) random variables
-with an exponential distribution with mean 1 / lambda. The service times are also assumed to be IID and exponentially
-distributed random variables with mean 1 / mu.
+    The purpose of this project is to simulate the queues that an airline customer will have to face in order to be 
+    able to board a plane. We assume that there is only one air line company in the airport. Furthermore, we
+    assume that passengers' interarrival times are independent and identically distributed (IID) random variables
+    with an exponential distribution with mean 1 / lambda. The service times are also assumed to be IID and exponentially
+    distributed random variables with mean 1 / mu.
 
-Initially the passenger will have to pass through the check-in gate (M/M/1) where they will have to present
-a copy of their flight confirmation at the reception desk. Once inside the terminal building, due to security
-measures, all passengers must pass through security check. Passengers are split up into three different queues
-(M/M/1), where they will be throughly searched and checked. There is an airport security offcer that directs the
-passengers to each queue, guaranteeing that each queue gets the same amount of passengers. Finally, once inside
-the airport lounge, passengers can head towards their plane, where a quick check of identification documents
-and baggage x-ray (M/M/1) will be followed by boarding of the aircraft.
+    Initially the passenger will have to pass through the check-in gate (M/M/1) where they will have to present
+    a copy of their flight confirmation at the reception desk. Once inside the terminal building, due to security
+    measures, all passengers must pass through security check. Passengers are split up into three different queues
+    (M/M/1), where they will be throughly searched and checked. There is an airport security offcer that directs the
+    passengers to each queue, guaranteeing that each queue gets the same amount of passengers. Finally, once inside
+    the airport lounge, passengers can head towards their plane, where a quick check of identification documents
+    and baggage x-ray (M/M/1) will be followed by boarding of the aircraft.
 
 *** To compile: ***
            
